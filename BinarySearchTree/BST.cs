@@ -93,5 +93,33 @@ namespace BSTOperations
                 return (Size(node.Left) + 1 + Size(node.Right));
             }
         }
+        public void Search(T element)
+        {
+            Node<T> current = root;
+            bool found = false;
+            while (current != null)
+            {
+                if (current.data.Equals(element))
+                {
+                    found = true;
+                    break;
+                }
+                else
+                {
+                    if (element.CompareTo(current.data) < 0)
+                    {
+                        current = current.Left;
+                    }
+                    else
+                    {
+                        current = current.Right;
+                    }
+                }
+            }
+            if (found)
+                Console.WriteLine("Element Found");
+            else
+                Console.WriteLine("Element Not Found");
+        }
     }
 }

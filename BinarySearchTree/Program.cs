@@ -16,6 +16,8 @@ namespace BSTOperations
             bst.DisplayBST(bst.root);
             Console.WriteLine("\n\nSize of BST: " + bst.Size(bst.root));
 
+            bst.Search(60);
+            bst.Search(20);
         }
     }
 }
