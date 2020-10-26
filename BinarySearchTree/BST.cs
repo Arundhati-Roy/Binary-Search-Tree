@@ -82,5 +82,16 @@ namespace BSTOperations
                 DisplayBST(parent.Right);
             }
         }
+        public int Size(Node<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return (Size(node.Left) + 1 + Size(node.Right));
+            }
+        }
     }
 }
